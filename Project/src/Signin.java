@@ -75,7 +75,7 @@ public class Signin extends JFrame{
         btnSignup.addActionListener(new ActionListener() {
         	@Override
             public void actionPerformed(ActionEvent e) {
-               Signup();
+               main.showSignup();
             }
         });
         
@@ -85,8 +85,7 @@ public class Signin extends JFrame{
         btnID.addActionListener(new ActionListener() {
         	@Override
             public void actionPerformed(ActionEvent e) {
-                userText.setText("");
-                passText.setText("");
+                main.showFID();
             }
         });
         
@@ -96,8 +95,7 @@ public class Signin extends JFrame{
         btnPW.addActionListener(new ActionListener() {
         	@Override
             public void actionPerformed(ActionEvent e) {
-                userText.setText("");
-                passText.setText("");
+                main.showFPW();
             }
         });
        
@@ -133,9 +131,5 @@ public class Signin extends JFrame{
  
     public boolean isLogin() {     
         return bLoginCheck;
-    }
- 
-    public void Signup() {
-    	main.showSignup();
     }
 }
