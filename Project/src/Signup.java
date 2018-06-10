@@ -23,7 +23,9 @@ public class Signup extends JFrame {
 	private JPasswordField passwordField;
 
 	public Signup() {
+		setTitle("Signup");
 		setVisible(true);
+		setResizable(false);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 200, 400, 380);
@@ -32,6 +34,10 @@ public class Signup extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		this.showSignup();
+	}
+	
+	public void showSignup() {
 		JLabel label = new JLabel("¾ÆÀÌµð");
 		label.setFont(new Font("±¼¸²", Font.BOLD, 14));
 		label.setBounds(30, 25, 100, 31);

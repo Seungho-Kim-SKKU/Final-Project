@@ -22,6 +22,7 @@ public class FID extends JFrame{
 	
 	public FID() {
 		setVisible(true);
+		setResizable(false);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -30,6 +31,10 @@ public class FID extends JFrame{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		this.showFID();
+	}
+	
+	public void showFID() {
 		SID = new JTextField();
 		SID.setBounds(145, 50, 258, 33);
 		contentPane.add(SID);
@@ -70,7 +75,6 @@ public class FID extends JFrame{
 			}
 		});
 	}
-	
 	public void Idf() {
 		if(new String(SID.getText()).equals("test") && Name.getText().equals("test")) {
 			setVisible(true);
@@ -84,7 +88,18 @@ public class FID extends JFrame{
 			
 			JLabel outputID = new JLabel("당신의 아이디는 " + a + " 입니다.");
 			outputID.setBounds(12, 55, 219, 44);
-			contentPane.add(outputID);						
+			contentPane.add(outputID);	
+			
+			JButton ok = new JButton("확인");
+			ok.setBounds(85, 100, 80, 25);
+			contentPane.add(ok);
+			ok.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					dispose();
+				}
+			});
+			
 		}
 		else {
             JOptionPane.showMessageDialog(null, "Faild");

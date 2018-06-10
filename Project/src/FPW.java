@@ -17,6 +17,7 @@ public class FPW extends JFrame{
 	
 	public FPW() {
 		setVisible(true);
+		setResizable(false);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -25,6 +26,9 @@ public class FPW extends JFrame{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		this.showFPW();
+	}
+	public void showFPW() {
 		JLabel lblNewLabel = new JLabel("\uC544\uC774\uB514 :");
 		lblNewLabel.setFont(new Font("±¼¸²", Font.BOLD, 23));
 		lblNewLabel.setBounds(33, 53, 105, 34);
