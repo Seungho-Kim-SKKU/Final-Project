@@ -30,6 +30,13 @@ public class readtheprofile extends JFrame {
     int Question_number;
     String Answer;
     int Fail_number;
+    String Math;
+    String Physics;
+    String Chemistry;
+    String Software;
+    String Gongza;
+    String Condition;
+    String Rest_reason;
     
 String read_Student_ID(int order) throws IOException {
 	    
@@ -305,6 +312,214 @@ String read_Student_ID(int order) throws IOException {
 		}
 	    return Fail_number;
     }
+
+     String read_Math( int order )throws IOException {
+    	Reader isr;
+	    InputStream fis;
+	    BufferedReader br = null;
+	    
+	    try {
+	    	
+	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+			isr = new InputStreamReader (fis);
+		    br  = new BufferedReader (isr);
+		    String data = null;
+		    for(int i=0;i<order+1;i++) {
+		    	data = br.readLine();
+		    }
+		    String[] a = data.split(",");
+		    
+		    Math = a[10];
+	    }
+	    catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+	    catch (IOException e){
+			e.printStackTrace();
+		}
+	    finally{
+			br.close ();
+		}
+	    return Math;
+    }
+     
+     String read_Physics( int order )throws IOException {
+     	Reader isr;
+ 	    InputStream fis;
+ 	    BufferedReader br = null;
+ 	    
+ 	    try {
+ 	    	
+ 	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+ 			isr = new InputStreamReader (fis);
+ 		    br  = new BufferedReader (isr);
+ 		    String data = null;
+ 		    for(int i=0;i<order+1;i++) {
+ 		    	data = br.readLine();
+ 		    }
+ 		    String[] a = data.split(",");
+ 		    
+ 		    Physics = a[11];
+ 	    }
+ 	    catch (FileNotFoundException e) {
+ 			e.printStackTrace();
+ 		} 
+ 	    catch (IOException e){
+ 			e.printStackTrace();
+ 		}
+ 	    finally{
+ 			br.close ();
+ 		}
+ 	    return Physics;
+     }
+     String read_Chemistry( int order )throws IOException {
+      	Reader isr;
+  	    InputStream fis;
+  	    BufferedReader br = null;
+  	    
+  	    try {
+  	    	
+  	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+  			isr = new InputStreamReader (fis);
+  		    br  = new BufferedReader (isr);
+  		    String data = null;
+  		    for(int i=0;i<order+1;i++) {
+  		    	data = br.readLine();
+  		    }
+  		    String[] a = data.split(",");
+  		    
+  		    Chemistry = a[12];
+  	    }
+  	    catch (FileNotFoundException e) {
+  			e.printStackTrace();
+  		} 
+  	    catch (IOException e){
+  			e.printStackTrace();
+  		}
+  	    finally{
+  			br.close ();
+  		}
+  	    return Chemistry;
+      }
+     
+     String read_Software( int order )throws IOException {
+       	Reader isr;
+   	    InputStream fis;
+   	    BufferedReader br = null;
+   	    
+   	    try {
+   	    	
+   	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+   			isr = new InputStreamReader (fis);
+   		    br  = new BufferedReader (isr);
+   		    String data = null;
+   		    for(int i=0;i<order+1;i++) {
+   		    	data = br.readLine();
+   		    }
+   		    String[] a = data.split(",");
+   		    
+   		    Software = a[13];
+   	    }
+   	    catch (FileNotFoundException e) {
+   			e.printStackTrace();
+   		} 
+   	    catch (IOException e){
+   			e.printStackTrace();
+   		}
+   	    finally{
+   			br.close ();
+   		}
+   	    return Software;
+       }
     
+     String read_Gongza( int order )throws IOException {
+        	Reader isr;
+    	    InputStream fis;
+    	    BufferedReader br = null;
+    	    
+    	    try {
+    	    	
+    	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+    			isr = new InputStreamReader (fis);
+    		    br  = new BufferedReader (isr);
+    		    String data = null;
+    		    for(int i=0;i<order+1;i++) {
+    		    	data = br.readLine();
+    		    }
+    		    String[] a = data.split(",");
+    		    
+    		    Gongza = a[14];
+    	    }
+    	    catch (FileNotFoundException e) {
+    			e.printStackTrace();
+    		} 
+    	    catch (IOException e){
+    			e.printStackTrace();
+    		}
+    	    finally{
+    			br.close ();
+    		}
+    	    return Gongza;
+        }
+     
+     String read_Condition( int order )throws IOException {
+     	Reader isr;
+ 	    InputStream fis;
+ 	    BufferedReader br = null;
+ 	    
+ 	    try {
+ 	    	
+ 	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+ 			isr = new InputStreamReader (fis);
+ 		    br  = new BufferedReader (isr);
+ 		    String data = null;
+ 		    for(int i=0;i<order+1;i++) {
+ 		    	data = br.readLine();
+ 		    }
+ 		    String[] a = data.split(",");
+ 		    
+ 		    Condition = a[15];
+ 	    }
+ 	    catch (FileNotFoundException e) {
+ 			e.printStackTrace();
+ 		} 
+ 	    catch (IOException e){
+ 			e.printStackTrace();
+ 		}
+ 	    finally{
+ 			br.close ();
+ 		}
+ 	    return Condition;
+     }
+     
+     String read_Rest_reason( int order )throws IOException {
+      	Reader isr;
+  	    InputStream fis;
+  	    BufferedReader br = null;
+  	    
+  	    try {
+  	    	
+  	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
+  			isr = new InputStreamReader (fis);
+  		    br  = new BufferedReader (isr);
+  		    String data = null;
+  		    for(int i=0;i<order+1;i++) {
+  		    	data = br.readLine();
+  		    }
+  		    String[] a = data.split(",");
+  		    
+  		    Rest_reason = a[16];
+  	    }
+  	    catch (FileNotFoundException e) {
+  			e.printStackTrace();
+  		} 
+  	    catch (IOException e){
+  			e.printStackTrace();
+  		}
+  	    finally{
+  			br.close ();
+  		}
+  	    return Rest_reason;
+      }
     
 }

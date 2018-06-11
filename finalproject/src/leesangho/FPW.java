@@ -56,6 +56,8 @@ public class FPW extends readtheprofile{
 	         int order;
 	         public void actionPerformed(ActionEvent arg0) {
 	        	
+	        	
+	        	 
 	            id=new String(textField.getText());
 	            sn=textField_1.getText();
 	            	
@@ -64,7 +66,10 @@ public class FPW extends readtheprofile{
 						   
 	            		   b=read_Student_ID(i);
 						   a=read_ID(i);
-						   
+						   if(new String(textField.getText()).equals("")||textField_1.getText().equals("")) {
+								 JOptionPane.showMessageDialog(null, "입력안된 부분이 있습니다.");
+								 break;
+							 }
 						   if(a.equals(id)&&b.equals(sn)){
 							   
 							   order=i;

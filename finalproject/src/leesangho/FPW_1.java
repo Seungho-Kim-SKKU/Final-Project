@@ -74,19 +74,19 @@ public class FPW_1 extends readtheprofile {
         	   String b,c;
         	   b=textField.getText();
         	   
-        	   try {
-				if(b.equals(read_Answer(order))) {
-					   
-					c=read_Password(order);
-					JOptionPane.showMessageDialog(null, "당신의 비밀번호는 "+c+" 입니다");
-							
-					
-				   }
-				else {
-					
-					JOptionPane.showMessageDialog(null, "옳지 않은 답변입니다");
-					
-				}
+        	   try {	   
+        		   if(textField.getText().equals("")) {
+  					 JOptionPane.showMessageDialog(null, "입력안된 부분이 있습니다.");
+   				   }
+        		   else {      		   
+				      if(b.equals(read_Answer(order))) {
+					       c=read_Password(order);
+					       JOptionPane.showMessageDialog(null, "당신의 비밀번호는 "+c+" 입니다");					
+				       }
+			 	       else      {				
+				 	   JOptionPane.showMessageDialog(null, "옳지 않은 답변입니다");					
+				       }
+        		   }
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

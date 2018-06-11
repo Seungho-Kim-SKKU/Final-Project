@@ -94,6 +94,10 @@ public class FID extends readtheprofile{
 			try {
 				a=read_Student_ID(i);
 				b=read_Name(i);
+				if(SID.getText().equals("")||Name.getText().equals("")) {
+					 JOptionPane.showMessageDialog(null, "입력안된 부분이 있습니다.");
+					 break;
+				 }
 				if(new String(SID.getText()).equals(a) && Name.getText().equals(b)) {
 					String c = read_ID(i);
 					setVisible(true);

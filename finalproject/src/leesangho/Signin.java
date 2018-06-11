@@ -78,7 +78,8 @@ public class Signin extends readtheprofile {
         btnSignup.addActionListener(new ActionListener() {
         	@Override
             public void actionPerformed(ActionEvent e) {
-               main.showSignup();
+        		Signup frame = new Signup();
+	               frame.setVisible(true);
             }
         });
         
@@ -121,6 +122,11 @@ public class Signin extends readtheprofile {
     			for(int i=0;i<21;i++) {
 				 a=read_ID(i);
 				 b=read_Password(i);
+				 if(userText.getText().equals("")||new String(passText.getPassword()).equals("")) {
+					 JOptionPane.showMessageDialog(null, "입력안된 부분이 있습니다.");
+					 break;
+				 }
+				 
 				 if(userText.getText().equals(a)||count==1) {
 					 count=1;
 					if(new String(passText.getPassword()).equals(b)) {
