@@ -135,6 +135,7 @@ public class Signin extends readtheprofile {
 			           
 			            // 로그인 성공이라면 매니져창 뛰우기
 			            if(isLogin()){
+			            	Order=i;
 			                main.showFrameTest(); // 메인창 메소드를 이용해 창뛰우기
 			            }
 			            break;
