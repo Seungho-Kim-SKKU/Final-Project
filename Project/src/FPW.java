@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class FPW extends JFrame{
-	
+	////////
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
