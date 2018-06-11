@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		Main main = new Main();
         main.signin = new Signin(); // 로그인창 보이기
-        main.signin.setMain(main); // 로그인창에게 메인 클래스보내기     
+        main.signin.setMain(main); // 로그인창에게 메인 클래스보내기  dddd   
 	}
 	
 	public void showFrameTest(){		

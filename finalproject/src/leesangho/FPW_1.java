@@ -25,7 +25,7 @@ public class FPW_1 extends readtheprofile {
 	
 	public FPW_1(int order) throws IOException {
 		
-		String a="질문설정안댐";
+		String a="질문설정안되었음";
 		
 		setVisible(true);
 		
