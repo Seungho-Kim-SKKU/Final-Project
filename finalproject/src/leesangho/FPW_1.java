@@ -54,7 +54,7 @@ public class FPW_1 extends readtheprofile {
 	      int num=0;
 	      num=read_Question_number(order);
 	      if(num==1)
-	    	  a="당신의 고향은?";
+	    	  a="당신의 고향은?  ";
 	      if(num==2)
 	    	  a="당신의 출신 고등학교는?";
 	      if(num==3)
