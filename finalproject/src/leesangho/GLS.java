@@ -219,7 +219,7 @@ public class GLS extends writetheprofile {
                 write_Address(textField_4.getText(),i);
                 changecsvfile();
                 
-                write_Address_details(textField_4.getText(),i);
+                write_Address_details(textField_5.getText(),i);
                 changecsvfile();
                 
                 if(rdbtnNewRadioButton_4.isSelected()) {

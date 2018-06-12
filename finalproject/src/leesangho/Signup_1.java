@@ -23,6 +23,7 @@ import java.awt.event.ActionEvent;
 
 public class Signup_1 extends writetheprofile{
 	
+	
 	   private JPanel contentPane;
 	   private JTextField textField;
 	   private JTextField textField_1;
@@ -133,8 +134,9 @@ public class Signup_1 extends writetheprofile{
 							write_Position( "교수" ,order);
 							changecsvfile();
 						}		
-						JOptionPane.showMessageDialog(null, "회원가입 성공!");
 						
+						Signup_2 Signup = new Signup_2(order);
+						dispose();
 					} catch (FileNotFoundException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -153,6 +155,7 @@ public class Signup_1 extends writetheprofile{
 	      JButton btnNewButton_1 = new JButton("\uCDE8\uC18C");  //취소
 	      btnNewButton_1.addActionListener(new ActionListener() {
 	         public void actionPerformed(ActionEvent e) {
+	        	 dispose();
 	         }
 	      });
 	      btnNewButton_1.setBounds(239, 265, 105, 27);
