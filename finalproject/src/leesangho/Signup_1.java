@@ -72,7 +72,7 @@ public class Signup_1 extends writetheprofile{
 	      contentPane.add(lblNewLabel_3);
 	      
 	      JComboBox comboBox = new JComboBox();
-	      comboBox.setModel(new DefaultComboBoxModel(new String[] {"1." ,"2. \uB2F9\uC2E0\uC758 \uACE0\uD5A5\uC740?", "3. \uB2F9\uC2E0\uC758 \uCD9C\uC2E0 \uACE0\uB4F1\uD559\uAD50\uB294?", "4. \uB2F9\uC2E0\uC758 \uCD5C\uC560 \uC5F0\uC608\uC778\uC740?", "4. \uB2F9\uC2E0\uC774 \uAC00\uC7A5 \uC88B\uC544\uD558\uB294 \uC74C\uC2DD\uC740?"}));
+	      comboBox.setModel(new DefaultComboBoxModel(new String[] {"" ,"1. \uB2F9\uC2E0\uC758 \uACE0\uD5A5\uC740?", "2. \uB2F9\uC2E0\uC758 \uCD9C\uC2E0 \uACE0\uB4F1\uD559\uAD50\uB294?", "3. \uB2F9\uC2E0\uC758 \uCD5C\uC560 \uC5F0\uC608\uC778\uC740?", "4. \uB2F9\uC2E0\uC774 \uAC00\uC7A5 \uC88B\uC544\uD558\uB294 \uC74C\uC2DD\uC740?"}));
 	      comboBox.setBounds(140, 158, 250, 24);
 	      contentPane.add(comboBox);
 	      

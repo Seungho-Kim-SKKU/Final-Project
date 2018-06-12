@@ -54,7 +54,7 @@ public class writetheprofile extends readtheprofile {
             	for(int j=0;j<17;j++) {
             		if(i==(order)&&j==4) {
             			bw.write(id);
-            			if(j!=6) {
+            			if(j!=16) {
              			   bw.write(",");
              			}
             		}
@@ -664,7 +664,8 @@ public class writetheprofile extends readtheprofile {
 	    BufferedReader br;
 	    
 	    try {
-			fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+			
+	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
 			isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	        
@@ -677,12 +678,14 @@ public class writetheprofile extends readtheprofile {
 	        for(int i=0;i<21;i++){
 	        	data=br.readLine();
 	        	a = data.split(",");
-	        	for(int j=0;j<10;j++) {
+	        	for(int j=0;j<17;j++) {
 	            	bw.write(a[j]);
-	            	if(j==9)
+	            	if(j==16)
 	            		break;
 	            	bw.write(",");
 	        	}
+	        	if(i==20)
+	        		break;
 	        	bw.newLine();
 	        }
 	        bw.close();
