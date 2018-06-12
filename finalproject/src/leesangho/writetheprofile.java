@@ -251,7 +251,6 @@ public class writetheprofile extends readtheprofile {
 	    }
 	    
   }
-  
   void write_Answer ( String answer ,int order ) throws FileNotFoundException {
   	
   	Writer osw;
