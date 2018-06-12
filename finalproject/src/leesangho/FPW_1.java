@@ -70,6 +70,7 @@ public class FPW_1 extends readtheprofile {
         
         JButton btnNewButton = new JButton("\uD655\uC778");
         btnNewButton.addActionListener(new ActionListener() {
+        	@Override
            public void actionPerformed(ActionEvent e) {
         	   String b,c;
         	   b=textField.getText();
@@ -80,8 +81,9 @@ public class FPW_1 extends readtheprofile {
    				   }
         		   else {      		   
 				      if(b.equals(read_Answer(order))) {
-					       c=read_Password(order);
-					       JOptionPane.showMessageDialog(null, "당신의 비밀번호는 "+c+" 입니다");					
+					       c=read_Password(order);					       
+					       JOptionPane.showMessageDialog(null, "당신의 비밀번호는 "+c+" 입니다");	
+					       dispose();
 				       }
 			 	       else      {				
 				 	   JOptionPane.showMessageDialog(null, "옳지 않은 답변입니다");					

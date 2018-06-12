@@ -24,6 +24,7 @@ import java.awt.event.ActionEvent;
 
 public class Signup_2 extends writetheprofile {
 
+	ImageIcon img = new ImageIcon("./성균관대학교로고.png");
 	private JPanel contentPane;
 
 	public Signup_2(int order) {
@@ -99,7 +100,7 @@ public class Signup_2 extends writetheprofile {
 		
 		JLabel label = new JLabel("");
 		label.setBackground(new Color(255, 255, 255));
-		label.setIcon(new ImageIcon("C:\\Users\\gfl50\\eclipse-workspace\\tester\\\uC131\uADE0\uAD00\uB300\uD559\uAD50\uB85C\uACE0.jpg"));
+		label.setIcon(img);
 		label.setBounds(0, 89, 268, 269);
 		panel.add(label);
 		

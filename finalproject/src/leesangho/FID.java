@@ -29,6 +29,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 public class FID extends readtheprofile{	
 	
@@ -43,6 +44,7 @@ public class FID extends readtheprofile{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -53,11 +55,13 @@ public class FID extends readtheprofile{
 		SID.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("학번 :");
+		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setFont(new Font("굴림", Font.BOLD, 23));
 		lblNewLabel.setBounds(42, 50, 85, 33);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("이름 :");
+		lblNewLabel_1.setBackground(Color.WHITE);
 		lblNewLabel_1.setFont(new Font("굴림", Font.BOLD, 23));
 		lblNewLabel_1.setBounds(42, 118, 85, 33);
 		contentPane.add(lblNewLabel_1);
@@ -68,6 +72,7 @@ public class FID extends readtheprofile{
 		Name.setColumns(10);
 		
 		JButton finding = new JButton("ID 확인");
+		finding.setBackground(Color.WHITE);
 		finding.setBounds(76, 190, 111, 42);
 		contentPane.add(finding);
 		finding.addActionListener(new ActionListener() {
@@ -78,6 +83,7 @@ public class FID extends readtheprofile{
 		});
 		
 		JButton cancel = new JButton("취소");
+		cancel.setBackground(Color.WHITE);
 		cancel.setBounds(222, 190, 111, 42);
 		contentPane.add(cancel);
 		cancel.addActionListener(new ActionListener() {
@@ -104,8 +110,9 @@ public class FID extends readtheprofile{
 					setVisible(true);
 					
 					setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-					setBounds(100, 100, 259, 186);
+					setBounds(100, 100, 259, 212);
 					contentPane = new JPanel();
+					contentPane.setBackground(Color.WHITE);
 					contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 					setContentPane(contentPane);
 					contentPane.setLayout(null);
@@ -113,6 +120,17 @@ public class FID extends readtheprofile{
 					JLabel outputID = new JLabel("당신의 아이디는 " + c + " 입니다.");
 					outputID.setBounds(12, 55, 219, 44);
 					contentPane.add(outputID);		
+					
+					JButton button = new JButton("확인");
+					button.addActionListener(new ActionListener() {
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							dispose();
+						}
+					});
+					button.setBackground(Color.WHITE);
+					button.setBounds(66, 126, 105, 27);
+					contentPane.add(button);
 					break;
 				}
 				else {

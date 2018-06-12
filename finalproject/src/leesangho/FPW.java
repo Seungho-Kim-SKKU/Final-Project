@@ -57,6 +57,7 @@ public class FPW extends readtheprofile{
             String id,sn;
             String a,b;
             int order;
+            @Override
             public void actionPerformed(ActionEvent arg0) {
               
               
@@ -78,6 +79,7 @@ public class FPW extends readtheprofile{
                         order=i;
                         FPW_1 frame = new FPW_1(order);
                            frame.setVisible(true);
+                           dispose();
                            break;
                         
                      }
@@ -89,8 +91,6 @@ public class FPW extends readtheprofile{
                         else
                            continue;                     
                      }
-                     
-                     
                      
                      }
                } catch (IOException e) {
