@@ -37,12 +37,24 @@ public class readtheprofile extends JFrame {
     String Gongza;
     String Condition;
     String Rest_reason;
+    String Rest_count;
+    String Major;
+    int Semester;
+    String House_number;
+    String Address;
+    String Address_details;
+    String Post_number;
+    String For;
+    String Phone_number1;
+    String Phone_number2;
     
-String read_Student_ID(int order) throws IOException {
+    String read_Student_ID(int order) throws IOException {
 	    
     	Reader isr;
 	    InputStream fis;
 	    BufferedReader br = null;
+	    
+	    
 	    
 	    try {
 	    	
@@ -66,7 +78,7 @@ String read_Student_ID(int order) throws IOException {
 		br.close ();
 	    return Student_ID;
     }
-    
+   
     String read_Name(int order) throws IOException {
 	    
     	Reader isr;
@@ -188,11 +200,7 @@ String read_Student_ID(int order) throws IOException {
 		}
 	    return Password;
     }
-    
-    
-    
-    
-    
+   
     String read_Position ( int order )throws IOException {
     	Reader isr;
 	    InputStream fis;
@@ -344,6 +352,7 @@ String read_Student_ID(int order) throws IOException {
     }
      
      String read_Physics( int order )throws IOException {
+
      	Reader isr;
  	    InputStream fis;
  	    BufferedReader br = null;
@@ -372,6 +381,7 @@ String read_Student_ID(int order) throws IOException {
  		}
  	    return Physics;
      }
+     
      String read_Chemistry( int order )throws IOException {
       	Reader isr;
   	    InputStream fis;
@@ -522,4 +532,303 @@ String read_Student_ID(int order) throws IOException {
   	    return Rest_reason;
       }
     
+     String read_Rest_count( int order )throws IOException {
+       	Reader isr;
+   	    InputStream fis;
+   	    BufferedReader br = null;
+   	    
+   	    try {
+   	    	
+   	    	fis = new FileInputStream ("./profile.csv");
+   	    	isr = new InputStreamReader (fis);
+   		    br  = new BufferedReader (isr);
+   		    String data = null;
+   		    for(int i=0;i<order+1;i++) {
+   		    	data = br.readLine();
+   		    }
+   		    String[] a = data.split(",");
+   		    
+   		    Rest_count = a[17];
+   	    }
+   	    catch (FileNotFoundException e) {
+   			e.printStackTrace();
+   		} 
+   	    catch (IOException e){
+   			e.printStackTrace();
+   		}
+   	    finally{
+   			br.close ();
+   		}
+   	    return Rest_count;
+       }
+     
+     String read_Major( int order )throws IOException {
+        	Reader isr;
+    	    InputStream fis;
+    	    BufferedReader br = null;
+    	    
+    	    try {
+    	    	
+    	    	fis = new FileInputStream ("./profile.csv");
+    	    	isr = new InputStreamReader (fis);
+    		    br  = new BufferedReader (isr);
+    		    String data = null;
+    		    for(int i=0;i<order+1;i++) {
+    		    	data = br.readLine();
+    		    }
+    		    String[] a = data.split(",");
+    		    
+    		    Major = a[18];
+    	    }
+    	    catch (FileNotFoundException e) {
+    			e.printStackTrace();
+    		} 
+    	    catch (IOException e){
+    			e.printStackTrace();
+    		}
+    	    finally{
+    			br.close ();
+    		}
+    	    return Major;
+        }
+      
+     int read_Semester( int order )throws IOException {
+     	Reader isr;
+ 	    InputStream fis;
+ 	    BufferedReader br = null;
+ 	    
+ 	    try {
+ 	    	
+ 	    	fis = new FileInputStream ("./profile.csv");
+ 	    	isr = new InputStreamReader (fis);
+ 		    br  = new BufferedReader (isr);
+ 		    String data = null;
+ 		    for(int i=0;i<order+1;i++) {
+ 		    	data = br.readLine();
+ 		    }
+ 		    String[] a = data.split(",");
+ 		    
+ 		    Semester = Integer.parseInt(a[19]);
+ 	    }
+ 	    catch (FileNotFoundException e) {
+ 			e.printStackTrace();
+ 		} 
+ 	    catch (IOException e){
+ 			e.printStackTrace();
+ 		}
+ 	    finally{
+ 			br.close ();
+ 		}
+ 	    return Semester;
+     }
+   
+     String read_House_number( int order )throws IOException {
+     	Reader isr;
+ 	    InputStream fis;
+ 	    BufferedReader br = null;
+ 	    
+ 	    try {
+ 	    	
+ 	    	fis = new FileInputStream ("./profile.csv");
+ 	    	isr = new InputStreamReader (fis);
+ 		    br  = new BufferedReader (isr);
+ 		    String data = null;
+ 		    for(int i=0;i<order+1;i++) {
+ 		    	data = br.readLine();
+ 		    }
+ 		    String[] a = data.split(",");
+ 		    
+ 		    House_number = a[20];
+ 	    }
+ 	    catch (FileNotFoundException e) {
+ 			e.printStackTrace();
+ 		} 
+ 	    catch (IOException e){
+ 			e.printStackTrace();
+ 		}
+ 	    finally{
+ 			br.close ();
+ 		}
+ 	    return House_number;
+     }
+     
+     String read_Address( int order )throws IOException {
+      	Reader isr;
+  	    InputStream fis;
+  	    BufferedReader br = null;
+  	    
+  	    try {
+  	    	
+  	    	fis = new FileInputStream ("./profile.csv");
+  	    	isr = new InputStreamReader (fis);
+  		    br  = new BufferedReader (isr);
+  		    String data = null;
+  		    for(int i=0;i<order+1;i++) {
+  		    	data = br.readLine();
+  		    }
+  		    String[] a = data.split(",");
+  		    
+  		    Address = a[21];
+  	    }
+  	    catch (FileNotFoundException e) {
+  			e.printStackTrace();
+  		} 
+  	    catch (IOException e){
+  			e.printStackTrace();
+  		}
+  	    finally{
+  			br.close ();
+  		}
+  	    return Address;
+      }
+      
+     String read_Address_details( int order )throws IOException {
+       	Reader isr;
+   	    InputStream fis;
+   	    BufferedReader br = null;
+   	    
+   	    try {
+   	    	
+   	    	fis = new FileInputStream ("./profile.csv");
+   	    	isr = new InputStreamReader (fis);
+   		    br  = new BufferedReader (isr);
+   		    String data = null;
+   		    for(int i=0;i<order+1;i++) {
+   		    	data = br.readLine();
+   		    }
+   		    String[] a = data.split(",");
+   		    
+   		 Address_details = a[22];
+   	    }
+   	    catch (FileNotFoundException e) {
+   			e.printStackTrace();
+   		} 
+   	    catch (IOException e){
+   			e.printStackTrace();
+   		}
+   	    finally{
+   			br.close ();
+   		}
+   	    return Address_details;
+       }
+       
+     String read_Post_number( int order )throws IOException {
+        	Reader isr;
+    	    InputStream fis;
+    	    BufferedReader br = null;
+    	    
+    	    try {
+    	    	
+    	    	fis = new FileInputStream ("./profile.csv");
+    	    	isr = new InputStreamReader (fis);
+    		    br  = new BufferedReader (isr);
+    		    String data = null;
+    		    for(int i=0;i<order+1;i++) {
+    		    	data = br.readLine();
+    		    }
+    		    String[] a = data.split(",");
+    		    
+    		    Post_number = a[23];
+    	    }
+    	    catch (FileNotFoundException e) {
+    			e.printStackTrace();
+    		} 
+    	    catch (IOException e){
+    			e.printStackTrace();
+    		}
+    	    finally{
+    			br.close ();
+    		}
+    	    return Post_number;
+        }
+      
+     String read_For( int order )throws IOException {
+     	Reader isr;
+ 	    InputStream fis;
+ 	    BufferedReader br = null;
+ 	    
+ 	    try {
+ 	    	
+ 	    	fis = new FileInputStream ("./profile.csv");
+ 	    	isr = new InputStreamReader (fis);
+ 		    br  = new BufferedReader (isr);
+ 		    String data = null;
+ 		    for(int i=0;i<order+1;i++) {
+ 		    	data = br.readLine();
+ 		    }
+ 		    String[] a = data.split(",");
+ 		    
+ 		    For = a[24];
+ 	    }
+ 	    catch (FileNotFoundException e) {
+ 			e.printStackTrace();
+ 		} 
+ 	    catch (IOException e){
+ 			e.printStackTrace();
+ 		}
+ 	    finally{
+ 			br.close ();
+ 		}
+ 	    return For;
+     }
+    
+     String read_Phone_number1( int order )throws IOException {
+      	Reader isr;
+  	    InputStream fis;
+  	    BufferedReader br = null;
+  	    
+  	    try {
+  	    	
+  	    	fis = new FileInputStream ("./profile.csv");
+  	    	isr = new InputStreamReader (fis);
+  		    br  = new BufferedReader (isr);
+  		    String data = null;
+  		    for(int i=0;i<order+1;i++) {
+  		    	data = br.readLine();
+  		    }
+  		    String[] a = data.split(",");
+  		    
+  		    Phone_number1 = a[25];
+  	    }
+  	    catch (FileNotFoundException e) {
+  			e.printStackTrace();
+  		} 
+  	    catch (IOException e){
+  			e.printStackTrace();
+  		}
+  	    finally{
+  			br.close ();
+  		}
+  	    return Phone_number1;
+      }
+     
+     String read_Phone_number2( int order )throws IOException {
+       	Reader isr;
+   	    InputStream fis;
+   	    BufferedReader br = null;
+   	    
+   	    try {
+   	    	
+   	    	fis = new FileInputStream ("./profile.csv");
+   	    	isr = new InputStreamReader (fis);
+   		    br  = new BufferedReader (isr);
+   		    String data = null;
+   		    for(int i=0;i<order+1;i++) {
+   		    	data = br.readLine();
+   		    }
+   		    String[] a = data.split(",");
+   		    
+   		    Phone_number2 = a[26];
+   	    }
+   	    catch (FileNotFoundException e) {
+   			e.printStackTrace();
+   		} 
+   	    catch (IOException e){
+   			e.printStackTrace();
+   		}
+   	    finally{
+   			br.close ();
+   		}
+   	    return Phone_number2;
+       }    
 }
