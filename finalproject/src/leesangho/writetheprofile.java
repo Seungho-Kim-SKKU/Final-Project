@@ -407,7 +407,7 @@ public class writetheprofile extends readtheprofile {
 		    
 	  }
   
-  void write_Chemisty ( String chemistry ,int order ) throws FileNotFoundException {
+  void write_Chemistry ( String chemistry ,int order ) throws FileNotFoundException {
 	  	
 	  	Writer osw;
 			BufferedWriter bw;
