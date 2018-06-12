@@ -119,7 +119,7 @@ public class GLS extends writetheprofile {
        setContentPane(contentPane);
        contentPane.setLayout(null);
        //////////////////////////////////////////
-       internalFrame_4 = new JInternalFrame("연락처조회및수정");
+       internalFrame_4 = new JInternalFrame("연락처조회및수정 ");
        internalFrame_4.getContentPane().setBackground(Color.WHITE);
        internalFrame_4.setBounds(168, 67, 1023, 865);
        contentPane.add(internalFrame_4);
