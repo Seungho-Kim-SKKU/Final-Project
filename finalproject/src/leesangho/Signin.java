@@ -50,11 +50,11 @@ public class Signin extends readtheprofile {
    
     public void placeLoginPanel(JPanel panel){
         panel.setLayout(null);     
-        JLabel userLabel = new JLabel("아이디");
+        JLabel userLabel = new JLabel(" 아이디 ");
         userLabel.setBounds(200, 200, 80, 25);
         panel.add(userLabel);
        
-        JLabel passLabel = new JLabel("비밀번호");
+        JLabel passLabel = new JLabel(" 비밀번호 ");
         passLabel.setBounds(200, 231, 80, 25);
         panel.add(passLabel);
        
