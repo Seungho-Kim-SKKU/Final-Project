@@ -90,8 +90,7 @@ public class Signup extends writetheprofile {
 		        		   int order=i;
 		        		   if(read_ID(i).equals("noid")) {
 		        		     Signup_1 frame = new Signup_1(a,b,c,order);
-			                 frame.setVisible(true);	
-			                 dispose();
+			                 frame.setVisible(true);		        		   
 		        		     break;
 		        		   }
 		        		   else {

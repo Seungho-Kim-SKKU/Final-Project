@@ -55,7 +55,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class GLS extends writetheprofile {
- String year, sem;
+ String year;
+ int sem;
  
  ImageIcon imgup = new ImageIcon("./상단.png");
  ImageIcon img_wall = new ImageIcon("./gls배경.png");
@@ -85,6 +86,11 @@ public class GLS extends writetheprofile {
  private JTextField textField_5;
  private final ButtonGroup buttonGroup = new ButtonGroup();
  private JTable table;
+ String number1=null;
+ String number2=null;
+ String address=null;
+ String address_n=null;
+ String fo=null;
 
  public GLS(int i)throws IOException {  
        String name;
@@ -96,11 +102,11 @@ public class GLS extends writetheprofile {
        
        
        name=read_Name(i);
-    major=read_Major(i);
-    grade=read_Semester(i)/2;
-    sn=read_Student_ID(i);
-    season=grade+2017;
-    semester=read_Semester(i);
+       major=read_Major(i);
+       grade=read_Semester(i)/2;
+       sn=read_Student_ID(i);
+       season=grade+2017;
+       semester=read_Semester(i);
        
        
        setVisible(true);
@@ -112,7 +118,7 @@ public class GLS extends writetheprofile {
        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
        setContentPane(contentPane);
        contentPane.setLayout(null);
-       
+       //////////////////////////////////////////
        internalFrame_4 = new JInternalFrame("연락처조회및수정");
        internalFrame_4.getContentPane().setBackground(Color.WHITE);
        internalFrame_4.setBounds(168, 67, 1023, 865);
@@ -207,11 +213,16 @@ public class GLS extends writetheprofile {
            @Override
             public void actionPerformed(ActionEvent e) {
                 
-            //if()///입력안된칸있을때 
+             
             
             try {
-       write_House_number(textField_2.getText(),i);
-       changecsvfile();
+            	
+            	if(textField_2.getText().equals("")||textField_3.getText().equals("")||textField_4.getText().equals("")||textField_5.getText().equals("")||!rdbtnNewRadioButton_4.isSelected()||!rdbtnNewRadioButton_5.isSelected()) {
+            		JOptionPane.showMessageDialog(null, "입력되지 않은 부분이 있습니다.");
+            	}else {
+            	
+                write_House_number(textField_2.getText(),i);
+                changecsvfile();
                 
                 write_Post_number(textField_3.getText(),i);
                 changecsvfile();
@@ -232,7 +243,7 @@ public class GLS extends writetheprofile {
                }
                 
                 JOptionPane.showMessageDialog(null, "추가 되었습니다.");
-                
+            	}
     } catch (FileNotFoundException e1) {
      // TODO Auto-generated catch block
      e1.printStackTrace();
@@ -253,7 +264,32 @@ public class GLS extends writetheprofile {
        button_1.addActionListener(new ActionListener() {
            @Override
             public void actionPerformed(ActionEvent e) {
-                ///추가한 데이터 불러오기
+                
+                try {
+                	
+                	/*{"1", "현거주지",null , fo , address_n , address},
+                    {"2", "연락처1",number1 , fo , address_n , address},
+                    {"3", "연락처2",number2 , fo , address_n  , address}*/
+					number1=read_Phone_number1(i);
+					number2=read_Phone_number2(i);
+	                address=read_Address(i)+" "+read_Address_details(i);
+	                address_n=read_Post_number(i);
+	                fo=read_For(i);
+	                Object[]aa=new Object[1];
+	                aa[2]=number1;
+	                Object[]bb=new Object[2];
+	                aa[2]=number2;
+	                for(int j=0;j<3;j++) {
+	                 Object[] cc = new Object[j];
+	                 aa[3] = fo;
+	                 aa[4]=address_n;
+	                 aa[5]=address;
+	                }
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+                
             }
         });
        
@@ -301,15 +337,53 @@ public class GLS extends writetheprofile {
        panel_14.add(textField_5);
        textField_5.setColumns(10);
        
+       JPanel panel_70 = new JPanel();
+       panel_70.setBackground(UIManager.getColor("Button.disabledShadow"));
+       panel_70.setBounds(173, 264, 831, 388);
+       panel_1.add(panel_70);
+       panel_70.setLayout(null);
        
+       JScrollPane scrollPane = new JScrollPane();
+       scrollPane.setBounds(0, 0, 828, 345);
+       panel_70.add(scrollPane);
+       
+       table = new JTable();
+       table.setBackground(UIManager.getColor("Button.disabledShadow"));
+       scrollPane.setViewportView(table);
+       table.setModel(new DefaultTableModel(
+    		   
+        new Object[][] {
+         {"1", "현거주지",null , fo , address_n , address},
+         {"2", "연락처1",number1 , fo , address_n , address},
+         {"3", "연락처2",number2 , fo , address_n  , address},
+        },
+        new String[] {
+         "\uBC88\uD638", "\uC5F0\uB77D\uCC98\uAD6C\uBD84", "\uC804\uD654\uBC88\uD638", "\uAD6D\uB0B4\uC678\uC8FC\uC18C\uAD6C\uBD84", "\uC6B0\uD3B8\uBC88\uD638", "\uC8FC\uC18C"
+        }
+       ) {
+        boolean[] columnEditables = new boolean[] {
+         true, true, true, true, false, true
+        };
+        public boolean isCellEditable(int row, int column) {
+         return columnEditables[column];
+        }
+       });
+       table.getColumnModel().getColumn(0).setPreferredWidth(15);
+       table.getColumnModel().getColumn(0).setMinWidth(5);
+       table.getColumnModel().getColumn(1).setPreferredWidth(31);
+       table.getColumnModel().getColumn(2).setMinWidth(40);
+       table.getColumnModel().getColumn(3).setPreferredWidth(21);
+       table.getColumnModel().getColumn(4).setResizable(false);
+       table.getColumnModel().getColumn(4).setMinWidth(40);
+       table.getColumnModel().getColumn(5).setMinWidth(40);
        
        JLabel lblNewLabel_3 = new JLabel("");
        lblNewLabel_3.setBounds(0, 0, 1011, 825);
        panel_1.add(lblNewLabel_3);
-       lblNewLabel_3.setBackground(Color.WHITE);
+       lblNewLabel_3.setBackground(UIManager.getColor("Button.disabledShadow"));
        lblNewLabel_3.setIcon(img_4);
        internalFrame_4.setVisible(false); 
-  
+       
   internalFrame_0 = new JInternalFrame("일반휴학신청");
   internalFrame_0.setBackground(new Color(255, 255, 255));
   internalFrame_0.getContentPane().setBackground(UIManager.getColor("Button.disabledShadow"));
@@ -324,14 +398,14 @@ public class GLS extends writetheprofile {
   panel.setBounds(0, 0, 1007, 829);
   internalFrame_0.getContentPane().add(panel);
   panel.setLayout(null);
-  
-  JLabel lblNewLabel_1 = new JLabel("aa");
+  //////////////////////////////////////////////////////////////////////////////////////
+  JLabel lblNewLabel_1 = new JLabel(name); //성명
   lblNewLabel_1.setBackground(new Color(173, 216, 230));
   lblNewLabel_1.setFont(new Font("돋움", Font.PLAIN, 14));
   lblNewLabel_1.setBounds(247, 74, 195, 26);
   panel.add(lblNewLabel_1);
   
-  textField_1 = new JTextField();
+  textField_1 = new JTextField();  ///비상연락처1
   textField_1.setBounds(218, 446, 232, 30);
   panel.add(textField_1);
   textField_1.setColumns(10);
@@ -383,52 +457,68 @@ public class GLS extends writetheprofile {
   JComboBox comboBox = new JComboBox();
   comboBox.addActionListener(new ActionListener() {
    public void actionPerformed(ActionEvent arg0) {
-    String num = comboBox.getSelectedItem().toString();
-    if (num == "1") {
-     year = "2018";
-     sem = "2";
-    }
-    else if (num == "2") {
-     year = "2019";
-     sem = "1";
-    }
-    else {
-     year = "2018";
-     sem = "1";
-    }  
-    lblNewLabel_2.setText(year);
-    label_6.setText(sem);
+    int year = 0;
+    int sem = 0;
+    int count = comboBox.getSelectedIndex();
+	if(count==0) {
+		year=grade;
+		sem=semester%2;
+		if(sem==0)
+			sem=2;
+	}
+	if(count==1) {
+		if(semester%2==0) {
+			sem=1;
+			year=grade;
+			year++;
+		}
+		if(semester%2==1) {
+			sem=2;
+		    year=grade;
+		}
+	}
+	if(count==2){
+		year=grade;
+		year++;
+		sem=semester%2;
+		if(sem==0)
+			sem=2;
+	}
+	
+	
+    lblNewLabel_2.setText(Integer.toString(2017+year));
+    label_6.setText(Integer.toString(sem));
    }
   });
   comboBox.setModel(new DefaultComboBoxModel(new String[] {"\uC120\uD0DD", "1", "2"}));
   comboBox.setBounds(214, 378, 142, 33);
   panel.add(comboBox);
   
-  JLabel lblBb = new JLabel("bb");
+  JLabel lblBb = new JLabel(major);   //전공
   lblBb.setFont(new Font("돋움", Font.PLAIN, 14));
   lblBb.setBackground(new Color(173, 216, 230));
   lblBb.setBounds(247, 106, 195, 26);
   panel.add(lblBb);
   
-  JLabel lblCc = new JLabel("cc");
+  JLabel lblCc = new JLabel(Integer.toString(grade)+"학년");  //학년
   lblCc.setFont(new Font("돋움", Font.PLAIN, 14));
   lblCc.setBackground(new Color(173, 216, 230));
   lblCc.setBounds(247, 140, 195, 24);
   panel.add(lblCc);
   
-  JLabel lblDd = new JLabel("dd");
+  JLabel lblDd = new JLabel(sn); //학번
   lblDd.setFont(new Font("돋움", Font.PLAIN, 14));
   lblDd.setBackground(new Color(173, 216, 230));
   lblDd.setBounds(714, 76, 195, 23);
   panel.add(lblDd);
   
-  JLabel lblEe = new JLabel("ee");
+  JLabel lblEe = new JLabel(Integer.toString(grade+2017)+"년도"); //수업학년도
   lblEe.setFont(new Font("돋움", Font.PLAIN, 14));
   lblEe.setBackground(new Color(173, 216, 230));
   lblEe.setBounds(714, 108, 195, 23);
   panel.add(lblEe);
   
-  JLabel lblFf = new JLabel("ff");
+  JLabel lblFf = new JLabel(Integer.toString(semester));  //수업학기
   lblFf.setFont(new Font("돋움", Font.PLAIN, 14));
   lblFf.setBackground(new Color(173, 216, 230));
   lblFf.setBounds(714, 139, 195, 26);
@@ -444,7 +534,73 @@ public class GLS extends writetheprofile {
   button.setIcon(img_5);
   button.setBounds(445, 620, 134, 29);
   panel.add(button);
-  
+  button.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+         
+    	  try {
+    		  
+    		if(textField_1.getText().equals("")||textField.getText().equals("")||comboBox.getSelectedIndex()==0||!rdbtnNewRadioButton.isSelected()||!rdbtnNewRadioButton_1.isSelected()||!rdbtnNewRadioButton_2.isSelected()||!rdbtnNewRadioButton_3.isSelected()||!radioButton.isSelected()||!radioButton_1.isSelected()) {
+    			JOptionPane.showMessageDialog(null, "입력안된 부분이 있습니다."); 			
+    		}else {
+    		write_Phone_number1(textField_1.getText(),i);
+    		changecsvfile();
+    			
+    		write_Phone_number2(textField_2.getText(),i);
+    		changecsvfile();
+			
+			
+			if(comboBox.getSelectedIndex()==1) {
+				write_Rest_count("1학기",i);
+				changecsvfile();
+			}
+			else {
+				write_Rest_count("2학기",i);
+				changecsvfile();
+			}
+			/////////////////////////////////////////
+			if(rdbtnNewRadioButton.isSelected()) {
+				write_Rest_reason("경제사정",i);
+				changecsvfile();
+			}
+			else if(rdbtnNewRadioButton_1.isSelected()) {
+				write_Rest_reason("군입대예정",i);
+				changecsvfile();				
+			}
+            else if(rdbtnNewRadioButton_2.isSelected()) {
+            	write_Rest_reason("질병",i);
+				changecsvfile();
+			}
+            else if(rdbtnNewRadioButton_3.isSelected()) {
+            	write_Rest_reason("어학연수",i);
+				changecsvfile();
+			}
+            else if(radioButton.isSelected()) {
+            	write_Rest_reason("개인사정",i);
+				changecsvfile();
+			}
+            else {
+            	write_Rest_reason("취업준비",i);
+				changecsvfile();
+            }
+			
+			
+
+				
+																																																																																																																																																																																																																																																																																										
+    		}	
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+    	  
+    	  
+      }
+   });
+  //////////////////////////////////////////////////////////////////////////////////////////
    
   
   label = new JLabel(img_0);
@@ -797,7 +953,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_42);
   panel_42.setLayout(null);
   
-  JLabel lblA_1 = new JLabel("a");
+  JLabel lblA_1 = new JLabel(read_Student_ID(i));
   lblA_1.setFont(new Font("돋움", Font.BOLD, 17));
   lblA_1.setBounds(4, 0, 213, 28);
   panel_42.add(lblA_1);
@@ -807,7 +963,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_43);
   panel_43.setLayout(null);
   
-  JLabel lblB_1 = new JLabel("b");
+  JLabel lblB_1 = new JLabel(read_Name(i));
   lblB_1.setFont(new Font("돋움", Font.BOLD, 17));
   lblB_1.setBounds(4, 0, 213, 28);
   panel_43.add(lblB_1);
@@ -817,7 +973,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_44);
   panel_44.setLayout(null);
   
-  JLabel lblC = new JLabel("c");
+  JLabel lblC = new JLabel(read_Resident_Registration_Number(i));
   lblC.setFont(new Font("돋움", Font.BOLD, 17));
   lblC.setBounds(4, 0, 213, 28);
   panel_44.add(lblC);
@@ -827,7 +983,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_45);
   panel_45.setLayout(null);
   
-  JLabel lblD_1 = new JLabel("d");
+  JLabel lblD_1 = new JLabel(Integer.toString(read_Semester(i)));
   lblD_1.setFont(new Font("돋움", Font.BOLD, 17));
   lblD_1.setBounds(4, 0, 213, 28);
   panel_45.add(lblD_1);
@@ -837,7 +993,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_46);
   panel_46.setLayout(null);
   
-  JLabel lblE_1 = new JLabel("e");
+  JLabel lblE_1 = new JLabel(read_Rest_reason(i));
   lblE_1.setFont(new Font("돋움", Font.BOLD, 17));
   lblE_1.setBounds(4, 0, 213, 28);
   panel_46.add(lblE_1);
@@ -847,7 +1003,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_47);
   panel_47.setLayout(null);
   
-  JLabel lblF_1 = new JLabel("f");
+  JLabel lblF_1 = new JLabel(read_ID(i));
   lblF_1.setFont(new Font("돋움", Font.BOLD, 17));
   lblF_1.setBounds(4, 0, 252, 28);
   panel_47.add(lblF_1);
@@ -857,7 +1013,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_48);
   panel_48.setLayout(null);
   
-  JLabel lblG = new JLabel("g");
+  JLabel lblG = new JLabel(read_Password(i));
   lblG.setFont(new Font("돋움", Font.BOLD, 17));
   lblG.setBounds(4, 0, 252, 28);
   panel_48.add(lblG);
@@ -867,7 +1023,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_49);
   panel_49.setLayout(null);
   
-  JLabel lblH = new JLabel("h");
+  JLabel lblH = new JLabel(read_Position(i));
   lblH.setFont(new Font("돋움", Font.BOLD, 17));
   lblH.setBounds(4, 0, 252, 28);
   panel_49.add(lblH);
@@ -877,7 +1033,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_50);
   panel_50.setLayout(null);
   
-  JLabel lblI = new JLabel("i");
+  JLabel lblI = new JLabel(read_Condition(i));
   lblI.setFont(new Font("돋움", Font.BOLD, 17));
   lblI.setBounds(4, 0, 252, 28);
   panel_50.add(lblI);
@@ -887,7 +1043,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_51);
   panel_51.setLayout(null);
   
-  JLabel lblJ = new JLabel("j");
+  JLabel lblJ = new JLabel(read_Rest_count(i));
   lblJ.setFont(new Font("돋움", Font.BOLD, 17));
   lblJ.setBounds(4, 0, 252, 28);
   panel_51.add(lblJ);
@@ -897,7 +1053,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_52);
   panel_52.setLayout(null);
   
-  JLabel lblK = new JLabel("k");
+  JLabel lblK = new JLabel(read_Major(i));
   lblK.setFont(new Font("돋움", Font.BOLD, 17));
   lblK.setBounds(4, 0, 748, 28);
   panel_52.add(lblK);
@@ -907,7 +1063,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_53);
   panel_53.setLayout(null);
   
-  JLabel lblL = new JLabel("l");
+  JLabel lblL = new JLabel(read_Address(i)+" "+read_Address_details(i));
   lblL.setFont(new Font("돋움", Font.BOLD, 17));
   lblL.setBounds(4, 0, 748, 28);
   panel_53.add(lblL);
@@ -917,7 +1073,17 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_54);
   panel_54.setLayout(null);
   
-  JLabel lblM = new JLabel("m");
+  int qn=read_Question_number(i);
+  String q = null;
+  if(qn==1)
+	  q="당신의 고향은?  ";
+  if(qn==2)
+	  q="당신의 출신 고등학교는?";
+  if(qn==3)
+	  q="당신의 최애 연예인은?";
+  if(qn==4)
+	  q="당신이 가장 좋아하는 음식은?";
+  JLabel lblM = new JLabel(q);
   lblM.setFont(new Font("돋움", Font.BOLD, 17));
   lblM.setBounds(4, 0, 748, 28);
   panel_54.add(lblM);
@@ -927,7 +1093,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_55);
   panel_55.setLayout(null);
   
-  JLabel lblN = new JLabel("n");
+  JLabel lblN = new JLabel(read_Answer(i));
   lblN.setFont(new Font("돋움", Font.BOLD, 17));
   lblN.setBounds(4, 0, 228, 28);
   panel_55.add(lblN);
@@ -937,7 +1103,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_56);
   panel_56.setLayout(null);
   
-  JLabel lblO = new JLabel("o");
+  JLabel lblO = new JLabel(read_Phone_number1(i));
   lblO.setFont(new Font("돋움", Font.BOLD, 17));
   lblO.setBounds(4, 0, 228, 28);
   panel_56.add(lblO);
@@ -947,7 +1113,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_57);
   panel_57.setLayout(null);
   
-  JLabel lblP = new JLabel("p");
+  JLabel lblP = new JLabel(read_Phone_number2(i));
   lblP.setFont(new Font("돋움", Font.BOLD, 17));
   lblP.setBounds(4, 0, 228, 28);
   panel_57.add(lblP);
@@ -981,7 +1147,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_62);
   panel_62.setLayout(null);
   
-  JLabel lblQ = new JLabel("q");
+  JLabel lblQ = new JLabel(read_Math(i));
   lblQ.setFont(new Font("돋움", Font.BOLD, 17));
   lblQ.setBounds(4, 0, 221, 28);
   panel_62.add(lblQ);
@@ -991,7 +1157,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_63);
   panel_63.setLayout(null);
   
-  JLabel lblR = new JLabel("r");
+  JLabel lblR = new JLabel(read_Physics(i));
   lblR.setFont(new Font("돋움", Font.BOLD, 17));
   lblR.setBounds(4, 0, 221, 28);
   panel_63.add(lblR);
@@ -1001,7 +1167,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_64);
   panel_64.setLayout(null);
   
-  JLabel lblS = new JLabel("s");
+  JLabel lblS = new JLabel(read_Chemistry(i));
   lblS.setFont(new Font("돋움", Font.BOLD, 17));
   lblS.setBounds(4, 0, 221, 28);
   panel_64.add(lblS);
@@ -1011,7 +1177,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_65);
   panel_65.setLayout(null);
   
-  JLabel lblT = new JLabel("t");
+  JLabel lblT = new JLabel(read_Software(i));
   lblT.setFont(new Font("돋움", Font.BOLD, 17));
   lblT.setBounds(4, 0, 221, 28);
   panel_65.add(lblT);
@@ -1021,7 +1187,7 @@ public class GLS extends writetheprofile {
   panel_3.add(panel_66);
   panel_66.setLayout(null);
   
-  JLabel lblU = new JLabel("u");
+  JLabel lblU = new JLabel(read_Gongza(i));
   lblU.setFont(new Font("돋움", Font.BOLD, 17));
   lblU.setBounds(4, 0, 221, 28);
   panel_66.add(lblU);
