@@ -125,6 +125,7 @@ public class Signup extends writetheprofile {
 	      JButton btnNewButton = new JButton("\uCDE8\uC18C");
 	      btnNewButton.addActionListener(new ActionListener() {
 	         public void actionPerformed(ActionEvent e) {
+	        	 dispose();
 	         }
 	      });
 	      btnNewButton.setBounds(223, 214, 105, 27);

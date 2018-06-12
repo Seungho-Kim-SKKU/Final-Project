@@ -46,7 +46,7 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\Users\\heesun\\Desktop\\finalproject\\src\\leesangho\\profile.csv");
+	    	fis = new FileInputStream ("./profile.csv");
 			isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
@@ -75,8 +75,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -106,8 +106,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -136,8 +136,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -166,8 +166,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -200,8 +200,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -230,8 +230,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -260,8 +260,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -290,8 +290,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -320,8 +320,8 @@ String read_Student_ID(int order) throws IOException {
 	    
 	    try {
 	    	
-	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 		    String data = null;
 		    for(int i=0;i<order+1;i++) {
@@ -350,8 +350,8 @@ String read_Student_ID(int order) throws IOException {
  	    
  	    try {
  	    	
- 	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
- 			isr = new InputStreamReader (fis);
+ 	    	fis = new FileInputStream ("./profile.csv");
+ 	    	isr = new InputStreamReader (fis);
  		    br  = new BufferedReader (isr);
  		    String data = null;
  		    for(int i=0;i<order+1;i++) {
@@ -379,8 +379,8 @@ String read_Student_ID(int order) throws IOException {
   	    
   	    try {
   	    	
-  	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-  			isr = new InputStreamReader (fis);
+  	    	fis = new FileInputStream ("./profile.csv");
+  	    	isr = new InputStreamReader (fis);
   		    br  = new BufferedReader (isr);
   		    String data = null;
   		    for(int i=0;i<order+1;i++) {
@@ -409,8 +409,8 @@ String read_Student_ID(int order) throws IOException {
    	    
    	    try {
    	    	
-   	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-   			isr = new InputStreamReader (fis);
+   	    	fis = new FileInputStream ("./profile.csv");
+   	    	isr = new InputStreamReader (fis);
    		    br  = new BufferedReader (isr);
    		    String data = null;
    		    for(int i=0;i<order+1;i++) {
@@ -439,8 +439,8 @@ String read_Student_ID(int order) throws IOException {
     	    
     	    try {
     	    	
-    	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-    			isr = new InputStreamReader (fis);
+    	    	fis = new FileInputStream ("./profile.csv");
+    	    	isr = new InputStreamReader (fis);
     		    br  = new BufferedReader (isr);
     		    String data = null;
     		    for(int i=0;i<order+1;i++) {
@@ -469,8 +469,8 @@ String read_Student_ID(int order) throws IOException {
  	    
  	    try {
  	    	
- 	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
- 			isr = new InputStreamReader (fis);
+ 	    	fis = new FileInputStream ("./profile.csv");
+ 	    	isr = new InputStreamReader (fis);
  		    br  = new BufferedReader (isr);
  		    String data = null;
  		    for(int i=0;i<order+1;i++) {
@@ -499,8 +499,8 @@ String read_Student_ID(int order) throws IOException {
   	    
   	    try {
   	    	
-  	    	fis = new FileInputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-  			isr = new InputStreamReader (fis);
+  	    	fis = new FileInputStream ("./profile.csv");
+  	    	isr = new InputStreamReader (fis);
   		    br  = new BufferedReader (isr);
   		    String data = null;
   		    for(int i=0;i<order+1;i++) {

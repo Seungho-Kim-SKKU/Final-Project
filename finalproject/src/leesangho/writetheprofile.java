@@ -37,11 +37,11 @@ public class writetheprofile extends readtheprofile {
 	    
 	    try{
 	    	    	
-	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	        
-	    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+	    	fos = new FileOutputStream ("./newprofile.csv");
 	        osw = new OutputStreamWriter (fos);
             bw  = new BufferedWriter (osw);
 	        
@@ -89,11 +89,11 @@ public class writetheprofile extends readtheprofile {
 	    
 	    try{
 	    	    	
-	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	    	
-	    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+	    	fos = new FileOutputStream ("./newprofile.csv");
 	        osw = new OutputStreamWriter (fos);
             bw  = new BufferedWriter (osw);
 	        
@@ -145,11 +145,11 @@ public class writetheprofile extends readtheprofile {
 	    
 	    try{
 	    	    	
-	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	        
-	    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+	    	fos = new FileOutputStream ("./newprofile.csv");
 	        osw = new OutputStreamWriter (fos);
             bw  = new BufferedWriter (osw);
 	        
@@ -198,11 +198,11 @@ public class writetheprofile extends readtheprofile {
 	    
 	    try{
 	    	    	
-	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	        
-	    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+	    	fos = new FileOutputStream ("./newprofile.csv");
 	        osw = new OutputStreamWriter (fos);
           bw  = new BufferedWriter (osw);
 	        
@@ -249,11 +249,11 @@ public class writetheprofile extends readtheprofile {
 	    
 	    try{
 	    	    	
-	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-			isr = new InputStreamReader (fis);
+	    	fis = new FileInputStream ("./profile.csv");
+	    	isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	        
-	    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+	    	fos = new FileOutputStream ("./newprofile.csv");
 	        osw = new OutputStreamWriter (fos);
           bw  = new BufferedWriter (osw);
 	        
@@ -302,11 +302,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	          bw  = new BufferedWriter (osw);
 		        
@@ -354,11 +354,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	          bw  = new BufferedWriter (osw);
 		        
@@ -406,11 +406,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	          bw  = new BufferedWriter (osw);
 		        
@@ -458,11 +458,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	          bw  = new BufferedWriter (osw);
 		        
@@ -510,11 +510,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	          bw  = new BufferedWriter (osw);
 		        
@@ -562,11 +562,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	          bw  = new BufferedWriter (osw);
 		        
@@ -614,11 +614,11 @@ public class writetheprofile extends readtheprofile {
 		    
 		    try{
 		    	    	
-		    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-				isr = new InputStreamReader (fis);
+		    	fis = new FileInputStream ("./profile.csv");
+		    	isr = new InputStreamReader (fis);
 			    br  = new BufferedReader (isr);
 		        
-		    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+		    	fos = new FileOutputStream ("./newprofile.csv");
 		        osw = new OutputStreamWriter (fos);
 	            bw  = new BufferedWriter (osw);
 		        
@@ -665,12 +665,12 @@ public class writetheprofile extends readtheprofile {
 	    
 	    try {
 			
-	    	fis = new FileInputStream("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\newprofile.csv");
+	    	fis = new FileInputStream("./newprofile.csv");
 			isr = new InputStreamReader (fis);
 		    br  = new BufferedReader (isr);
 	        
-	    	fos = new FileOutputStream ("C:\\\\Users\\\\heesun\\\\Desktop\\\\finalproject\\\\src\\\\leesangho\\\\profile.csv");
-	        osw = new OutputStreamWriter (fos);
+		    fos = new FileOutputStream ("./profile.csv");
+		    osw = new OutputStreamWriter (fos);
 	        bw  = new BufferedWriter (osw);
 	        
 	        String data;
